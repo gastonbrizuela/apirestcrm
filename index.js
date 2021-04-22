@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({
 }))
 app.use(bodyParser.json())
 app.use('/', cors(corsOptions),require('./config/routes'))
-app.use('/image_template',express.static(`${process.cwd()}/assets/image_template`))
+app.use('/image_template',express.static(`${process.cwd()}/assets/imageTemplate`))
 
 
 app.listen(PORT,()=>console.log(`Server Started on port ${PORT}`));
