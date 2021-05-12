@@ -7,7 +7,7 @@ class CrmTemplateController{
     static store(req,res){
         const keyImage = keygen._();
         const ima = async () => {
-            const browser = await puppeteer.launch({ executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe'});
+            const browser = await puppeteer.launch({ executablePath: '/usr/bin/google-chrome'});
             const page = await browser.newPage()
             await page.setViewport({
                 width: 640,

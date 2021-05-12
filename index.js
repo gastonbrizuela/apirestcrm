@@ -9,7 +9,7 @@ const corsOptions = {
 app.use(bodyParser.urlencoded({
     extended: false
 }))
-app.use(bodyParser.json())
+app.use(express.json())
 app.use('/', cors(corsOptions),require('./config/routes'))
 app.use('/image_template',express.static(`${process.cwd()}/assets/imageTemplate`))
 

@@ -5,6 +5,7 @@ const mysqlConnection = require('../config/database')
 
 class CrmCampaignControllers {
     static index(req,res){
+        console.log('llega al campaign')
         var sql = "select * from CrmCampaign"
         mysqlConnection.query(sql,(err,rows,fields)=>{
             if(!err){
