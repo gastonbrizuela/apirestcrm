@@ -12,6 +12,7 @@ router.post('/template', CrmTemplateController.store)
 router.get('/template',CrmTemplateController.index)
 router.get('/customer',CustomerController.index)
 router.get('/customer/:id',CustomerController.search)
+router.get('/customer/filter/:filter',CustomerController.filter)
 
 
 module.exports = router;

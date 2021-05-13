@@ -2,9 +2,9 @@ const mysql = require('mysql')
 //se cargan los parametros de conexion 
 const mysqlConnection = mysql.createPool({
     connectionLimit : 100,
-    host:'100.100.100.4',
-    user:'openorange',
-    password :'cosmetica1533',
+    host:'localhost',
+    user:'root',
+    password :'password',
     database: 'erp',
     multipleStatements: true
 });
