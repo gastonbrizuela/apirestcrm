@@ -16,8 +16,6 @@ class CrmCampaignControllers {
         })
     }
     static store(req,res){
-    console.log('llega donde guarda los datos')
-    console.log('llega donde guarda los datos dos')
     const columns = Object.keys(req.body);
     const values = Object.values(req.body);
 
