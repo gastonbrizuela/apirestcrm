@@ -2,6 +2,27 @@
 const mysqlConnection = require('../config/database')
 
 class CrmSegmentController{
+    static search(req,res){
+        var id = req.params['id']
+        var sql = `select * from CrmCampaignSegment where internalId = ${id} `
+        mysqlConnection.query(sql,(err,rows,fields)=>{
+            if(!err){
+                res.status(200).json(rows);
+            }else{
+                console.log(err)
+            }
+        })
+    }
+    static index(req,res){
+        var sql = "select * from CrmCampaignSegment"
+        mysqlConnection.query(sql,(err,rows,fields)=>{
+            if(!err){
+                res.status(200).json(rows);
+            }else{
+                console.log(err)
+            }
+        })
+    }
     static store(req,res){
         console.log('llega al store')
         const columns = Object.keys(req.body);
