@@ -14,6 +14,8 @@ router.get('/template',CrmTemplateController.index)
 router.get('/customer',CustomerController.index)
 router.get('/customer/:id',CustomerController.search)
 router.get('/customer/filter/:filter',CustomerController.filter)
+router.get('/segment',CrmSegmentController.index)
+router.get('/segment/:id',CrmSegmentController.search)
 router.post('/segment',CrmSegmentController.store)
 
 
