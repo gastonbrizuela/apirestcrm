@@ -49,7 +49,10 @@ class CustomerController{
         })
     }
     static filter(req,res){
-        var filter = req.params['filter']
+        var filter = req.body
+        console.log('llega al filtro ')
+        console.log(filter)
+        return
         const sql = `Select Name,Code,Email,Phone,Mobile,NameOne,LastNameTwo,Birthdate,Sex from Customer
                 where Name like '%${filter}%'
                 or Code like '%${filter}%'
